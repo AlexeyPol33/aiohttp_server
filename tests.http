@@ -1,0 +1,200 @@
+@baseUrl = http://localhost:8000/
+
+POST  {{baseUrl}}/user/
+Content-Type: application/json
+
+{
+    "username": "testtt",
+    "password": "testtest",
+    "email": "test@test.tst"
+}
+
+###
+POST  {{baseUrl}}/user/
+Authorization:  Basic test:testtest
+Content-Type: application/json
+
+{
+    "username": "test2",
+    "password": "testtest2",
+    "email": "test2@test.tst"
+}
+
+###
+POST  {{baseUrl}}/user/
+Content-Type: application/json
+
+{
+    "username": "test3",
+    "password": "testtest3",
+    "email": "test3@test.tst"
+}
+
+###
+POST  {{baseUrl}}/user/
+Content-Type: application/json
+
+{
+    "username": "test",
+    "password": "testtest",
+    "email": "test@test.tst"
+}
+
+###
+POST  {{baseUrl}}/user/
+Content-Type: application/json
+
+{
+    "user": "test",
+    "passord": "testtest",
+    "emil": "test@test.tst"
+}
+
+###
+POST  {{baseUrl}}/user/
+Content-Type: application/json
+
+{
+    "username": "test555",
+    "password": "testtest",
+    "email": "testtest.tst"
+}
+
+###
+GET  {{baseUrl}}/user/1
+
+
+###
+GET  {{baseUrl}}/user/9999
+Authorization:  Basic test:testtest
+
+###
+GET  {{baseUrl}}/user/9999
+Authorization:  Basic test:tes24t14t41e5st
+
+###
+
+PATCH {{baseUrl}}/user/1
+Content-Type: application/json
+Authorization:  Basic testtt:testtest
+
+{
+    "username": "test9",
+    "password": "testtest"
+}
+
+###
+PATCH {{baseUrl}}/user/1
+Content-Type: application/json
+Authorization:  Basic test99:testtest
+
+{
+    "username": "test99"
+}
+
+###
+PATCH {{baseUrl}}/user/1
+Content-Type: application/json
+Authorization:  Basic test99:testtest
+
+{
+    "username": "test"
+}
+
+###
+PATCH {{baseUrl}}/user/1
+Content-Type: application/json
+Authorization:  Basic test:tesdadadttest
+
+{
+    "username": "test99"
+}
+
+###
+PATCH {{baseUrl}}/user/1
+Content-Type: application/json
+Authorization:  Basic tes2313t:testtest
+
+{
+    "username": "test99"
+}
+
+###
+DELETE {{baseUrl}}/user/1
+Authorization:  Basic test:testtest
+
+###
+DELETE {{baseUrl}}/user/3
+Authorization:  Basic test2:testtest2
+
+###
+POST {{baseUrl}}/advertisement/
+Content-Type: application/json
+Authorization:  Basic test:testtest
+
+{
+    "title": "adadtest_advertisement",
+    "description":  "description_advertisement"
+}
+
+###
+POST {{baseUrl}}/advertisement/
+Content-Type: application/json
+Authorization:  Basic test2:testtest2
+
+{
+    "title": "test_advertisementaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "description":  "description_advertisement"
+}
+###
+POST {{baseUrl}}/advertisement/
+Content-Type: application/json
+
+{
+    "title": "test_advertisementaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "description":  "description_advertisement"
+}
+
+###
+POST {{baseUrl}}/advertisement/
+Content-Type: application/json
+Authorization:  Basic :testtest2
+
+{
+    "title": "test_advertisement",
+    "description":"description_advertisement"
+}
+
+###
+POST {{baseUrl}}/advertisement/
+Content-Type: application/json
+Authorization:  Basic test2:
+
+{
+    "title": "test_advertisement",
+    "description":"description_advertisement"
+}
+
+###
+GET {{baseUrl}}/advertisement/adadtest_advertisement
+Content-Type: application/json
+
+###
+PATCH {{baseUrl}}/advertisement/1
+Content-Type: application/json
+Authorization:  Basic test:testtest
+
+{
+    "title": "test_advertisementaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "description":  "description_advertisement"
+}
+
+###
+DELETE {{baseUrl}}/advertisement/1
+Content-Type: application/json
+Authorization: Basic test:testtest
+
+###
+DELETE {{baseUrl}}/advertisement/2
+Content-Type: application/json
+Authorization: Basic test2:testtest2
