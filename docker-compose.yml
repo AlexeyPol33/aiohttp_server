@@ -1,25 +1,35 @@
 version: "3.8"
+
 services:
-  web:
-    build: .
+
+  db:
+    image: postgres:latest
     ports:
-      - "8000:8000"
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: test
+    networks:
+      - mynetwork
+
+  web:
+    build:
+      context: .
+    environment:
+      DB_USER_NAME: postgres 
+      DB_PASSWORD: postgres 
+      DB_NAME: test 
+      DB_HOST: db
+      DB_PORT: 5432
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./app:/app
     depends_on:
       - db
     networks:
       - mynetwork
     
-
-  db:
-    image: postgres:latest
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=test
-    ports:
-      - "5432:5432"
-    networks:
-      - mynetwork
-
 networks:
   mynetwork:

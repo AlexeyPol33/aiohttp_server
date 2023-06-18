@@ -5,9 +5,12 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import MetaData
+from dotenv import load_dotenv
 import asyncio
 import enum
 import os
+
+load_dotenv()
 
 DB_USER_NAME = os.getenv('DB_USER_NAME', default='postgres')
 DB_PASSWORD = os.getenv('DB_PASSWORD', default='postgres')

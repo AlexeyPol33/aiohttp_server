@@ -303,7 +303,7 @@ class AdvertisementView(web.View):
 
        
 
-def get_app():
+async def get_app():
     app = web.Application()
     app.cleanup_ctx.append(orm_context)
     app.middlewares.append(session_middleware)
